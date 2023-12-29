@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "portfolio",
+  "description": "a collection of Brendan Le's best works",
+  "repository": "https://github.com/brendanle65/portfolio.git",
+  "author": "brendanle <brendan.mi.le@outlook.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^10.16.16",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.6"
+  }
+}
