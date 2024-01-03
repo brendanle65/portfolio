@@ -2,6 +2,20 @@
  * Theme configuration object for styled components which includes spacing, colors, and screen sizes.
  */
 export const THEME = {
+  cursor: {
+    idle: {
+      size: '30px',
+      opacity: 0.2,
+    },
+    hover: {
+      size: '9px',
+      opacity: 1,
+    },
+    hidden: {
+      size: '0px',
+      opacity: 0,
+    },
+  },
   layout: {
     x: '48px',
     y: '16px',
