@@ -1,11 +1,35 @@
+const _size = {
+  laptop: '1024px',
+  tablet: '768px',
+  mobile: '320px',
+};
+
 /**
  * Theme configuration object for styled components which includes spacing, colors, and screen sizes.
  */
 export const THEME = {
+  size: _size,
+  layout: {
+    laptop: {
+      x: '48px',
+      y: '16px',
+    },
+    tablet: {
+      x: '48px',
+      y: '16px',
+    },
+    mobile: {
+      x: '48px',
+      y: '16px',
+    },
+  },
+  min: (device) => `@media screen and (min-width: ${_size[device]})`,
+  max: (device) => `@media screen and (max-width: ${_size[device]})`,
+
   cursor: {
     idle: {
       size: '30px',
-      opacity: 0.2,
+      opacity: 0.4,
     },
     hover: {
       size: '9px',
@@ -16,18 +40,15 @@ export const THEME = {
       opacity: 0,
     },
   },
-  layout: {
-    x: '48px',
-    y: '16px',
-  },
+
   spacing: {
     ne: '0px', // none
     hr: '1px', // hairline
-    pe: '2px', // petite
-    xs: '4px', // extra-small
-    sm: '16px', // small
-    df: '24px', // default
-    lg: '64px', // large
+    pe: '2px', // petite // consumed
+    xs: '4px', // extra-small  //consumed
+    sm: '8px', // small // consumed
+    df: '16px', // default
+    lg: '32px', // large //consumed
     xl: '96px', // extra-large
     gi: '138px', // giant
   },
@@ -43,13 +64,21 @@ export const THEME = {
     xs: '12px',
     sm: '14px',
     df: '16px',
-    lg: '24px',
+    lg: '20px', // consumed
     xl: '36px',
     gh: '72px',
   },
+  iconSize: {
+    df: '18px',
+    lg: '24px',
+  },
   fontWeight: {
     df: 400,
-    md: 500,
+    md: 500, // consumed
+  },
+  borderHeight: {
+    df: '1px', // consumed
+    lg: '1.5px', // consumed
   },
   colors: {
     white: '#ffffff',
@@ -58,8 +87,7 @@ export const THEME = {
     yellow: '#FCDF00',
     green: '#0efb0e',
     gray: {
-      500: '#6b7280',
-      700: '#374151',
+      400: '#9ca3af', //consumed
     },
   },
 };

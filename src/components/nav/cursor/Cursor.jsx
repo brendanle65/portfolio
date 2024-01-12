@@ -50,9 +50,11 @@ const Cursor = () => {
   }, [state]);
 
   return (
-    <Styled.Container style={{ translateX: cursorXSpring, translateY: cursorYSpring }}>
-      <Styled.Cursor initial={cursorStyle} animate={cursorStyle} />
-    </Styled.Container>
+    <Styled.Cursor
+      initial={cursorStyle}
+      animate={cursorStyle}
+      style={{ translateX: cursorXSpring, translateY: cursorYSpring }}
+    />
   );
 };
 
