@@ -1,15 +1,12 @@
 import * as Styled from './Header.styled';
 import { SOCIALS } from '@/constants/socials';
 
-// i guess my plan for the header is to just collapse it to hamburger menu anyways
-// with transparent background for feedback
-
 /**
  * The Header component renders the navbar on the top of each page.
  */
 const Header = () => (
   <Styled.Container>
-    <Styled.Brand>
+    <Styled.Brand href="/">
       <Styled.Memoji />
       <Styled.Name>
         <div>Brendan</div>
@@ -21,7 +18,7 @@ const Header = () => (
     </Styled.Brand>
     <Styled.Nav>
       <Styled.Pages>
-        {['intro', 'about', 'portfolio', 'services', 'contact'].map((link, idx) => (
+        {['about', 'portfolio', 'services', 'contact'].map((link, idx) => (
           <Styled.PageLink key={idx} href={`#${link}`} scroll={true}>
             {link}
           </Styled.PageLink>

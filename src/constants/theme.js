@@ -49,16 +49,12 @@ export const THEME = {
     sm: '8px', // small // consumed
     df: '16px', // default
     lg: '32px', // large //consumed
-    xl: '96px', // extra-large
+    xl: '64px', // extra-large
     gi: '138px', // giant
   },
   fontHeight: {
-    xs: '150%',
-    sm: '150%',
-    df: '150%',
-    lg: '130%',
-    xl: '130%',
-    gi: '110%',
+    md: '130%', // consumed
+    lg: '150%',
   },
   fontSize: {
     xs: '12px',
@@ -66,7 +62,7 @@ export const THEME = {
     df: '16px',
     lg: '20px', // consumed
     xl: '36px',
-    gh: '72px',
+    gh: '56px',
   },
   iconSize: {
     df: '18px',

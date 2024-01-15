@@ -2,8 +2,10 @@ import Instagram from '@/images/logo-instagram.svg';
 import Dribbble from '@/images/logo-dribbble.svg';
 import Linkedin from '@/images/logo-linkedin.svg';
 import Github from '@/images/logo-github.svg';
-import Pinterest from '@/images/logo-pinterest.svg';
 
+/**
+ * A list of social medias to follow me on.
+ */
 export const SOCIALS = [
   {
     icon: Instagram,
@@ -20,10 +22,6 @@ export const SOCIALS = [
 
   {
     icon: Github,
-    href: 'www.google.com',
-  },
-  {
-    icon: Pinterest,
     href: 'www.google.com',
   },
 ];

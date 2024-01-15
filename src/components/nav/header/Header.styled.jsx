@@ -5,11 +5,12 @@ import Link from '@/components/core/Link';
 // Layout
 export const Container = styled.header(
   ({ theme }) => css`
-    color: white;
     display: flex;
-    background: ${theme.colors.blue};
     width: 100%;
     align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 500;
     padding: ${theme.layout.laptop.y} ${theme.layout.laptop.x};
     ${theme.max('tablet')} {
       padding: ${theme.layout.tablet.y} ${theme.layout.tablet.x};
@@ -27,7 +28,7 @@ export const Nav = styled.nav`
 `;
 
 // Branding
-export const Brand = styled.div`
+export const Brand = styled(Link)`
   display: flex;
   align-items: center;
 `;
@@ -77,8 +78,6 @@ export const Pages = styled.div`
 
 export const PageLink = styled(Link)(
   ({ theme }) => css`
-    color: white;
-
     &:after {
       display: block;
       content: '';
@@ -119,7 +118,6 @@ export const Icon = styled.span(
 
 export const SocialLink = styled(Link)`
   transition: all 250ms ease-in-out;
-  fill: white;
 
   &:hover ${Icon} {
     transform: ${(props) => (props.$rotateRight ? 'rotate(-7deg)' : 'rotate(7deg)')};

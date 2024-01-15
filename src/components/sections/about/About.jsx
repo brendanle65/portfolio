@@ -1,9 +1,13 @@
-import * as Styled from './About.styled';
+import Banner from './banner';
 
+/**
+ * The AboutPage page component details who I am. It renders my
+ * mission statement, the services I offer, and my biography.
+ */
 const About = () => (
-  <Styled.Section id="about">
-    <Styled.Title>Hello World!</Styled.Title>
-  </Styled.Section>
+  <div id="about">
+    <Banner />
+  </div>
 );
 
 export default About;
