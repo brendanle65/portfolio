@@ -54,6 +54,7 @@ export const THEME = {
     gi: '138px', // giant
   },
   fontHeight: {
+    sm: '110%', // consumed
     md: '130%', // consumed
     lg: '150%',
     xl: '200%', // consumed
