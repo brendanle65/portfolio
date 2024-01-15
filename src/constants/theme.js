@@ -49,12 +49,14 @@ export const THEME = {
     sm: '8px', // small // consumed
     df: '16px', // default
     lg: '32px', // large //consumed
-    xl: '64px', // extra-large
+    xl: '48px', // extra-large // consumed
+    hg: '64px', // huge // consumed
     gi: '138px', // giant
   },
   fontHeight: {
     md: '130%', // consumed
     lg: '150%',
+    xl: '200%', // consumed
   },
   fontSize: {
     xs: '12px',

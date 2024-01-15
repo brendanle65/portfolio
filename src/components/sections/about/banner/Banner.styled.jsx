@@ -27,7 +27,7 @@ export const LineOne = styled.div`
 
 export const LineTwo = styled.div`
   display: flex;
-  margin-left: ${(props) => props.theme.spacing.xl};
+  margin-left: ${(props) => props.theme.spacing.hg};
 `;
 
 export const LineThree = styled.div`
@@ -81,12 +81,12 @@ export const Scroll = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 48px;
+  bottom: ${(props) => props.theme.spacing.xl};
   font-size: ${(props) => props.theme.fontSize.sm};
   color: black;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: ${(props) => props.theme.fontWeight[500]};
   animation: ${bob} 1.5s ease-in-out infinite;
   opacity: ${(props) => props.$opacity};
 `;

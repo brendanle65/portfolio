@@ -18,7 +18,7 @@ const PHRASES = [
   'a fairer society',
 ];
 
-const TOP_OFFSET = 100; // number of pixels to scroll before fading
+const TOP_OFFSET = 25; // number of pixels to scroll before fading
 const BOTTOM_OFFSET = 200; // number of pixels above container to finish fading
 
 /**
