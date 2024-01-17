@@ -31,6 +31,5 @@ export const Paragraph = styled.p(
     font-size: ${theme.fontSize.df};
     line-height: ${theme.fontHeight.xl};
     margin-top: ${theme.spacing.df};
-    color: ${theme.colors.gray[700]};
   `
 );

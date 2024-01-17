@@ -87,6 +87,7 @@ export const THEME = {
     green: '#0efb0e',
     gray: {
       400: '#9ca3af', //consumed
+      500: '#6b7280', // consumed
     },
   },
 };
