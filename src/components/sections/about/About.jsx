@@ -3,7 +3,7 @@ import Biography from './biography';
 import Mantra from './mantra';
 
 /**
- * The AboutPage page component details who I am. It renders my
+ * The AboutPage component details who I am. It renders my
  * mission statement, the services I offer, and my biography.
  */
 const About = () => (

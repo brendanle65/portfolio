@@ -51,7 +51,6 @@ export const THEME = {
     lg: '32px', // large //consumed
     xl: '48px', // extra-large // consumed
     hg: '64px', // huge // consumed
-    gi: '138px', // giant
   },
   fontHeight: {
     sm: '110%', // consumed
@@ -60,12 +59,12 @@ export const THEME = {
     xl: '200%', // consumed
   },
   fontSize: {
-    xs: '12px',
+    xs: '12px', // consumed
     sm: '14px',
     df: '16px',
     lg: '20px', // consumed
     xl: '36px',
-    gh: '56px',
+    gh: '56px', // consumed
   },
   iconSize: {
     df: '18px',

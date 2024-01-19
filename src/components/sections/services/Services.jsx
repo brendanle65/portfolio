@@ -1,7 +1,5 @@
 import * as Styled from './Services.styled';
 
-// todo: change this design to https://www.ashcamp.co/info
-
 /**
  * The Services component outlines my various value propositions to potential clients/employers.
  */

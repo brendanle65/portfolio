@@ -1,4 +1,5 @@
 import Header from '@/components/nav/header';
+import Footer from '@/components/nav/footer';
 
 import About from '@/components/sections/about';
 import Portfolio from '@/components/sections/portfolio';
@@ -18,6 +19,7 @@ const HomePage = () => (
       <Services />
       <Contact />
     </main>
+    <Footer secondary />
   </>
 );
 
