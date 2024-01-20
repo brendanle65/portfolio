@@ -77,6 +77,7 @@ export const THEME = {
   borderHeight: {
     df: '1px', // consumed
     lg: '1.5px', // consumed
+    xl: '3px', // consumed
   },
   colors: {
     white: '#ffffff',
