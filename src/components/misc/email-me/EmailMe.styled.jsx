@@ -8,7 +8,7 @@ export const Block = styled.div`
 
 export const Email = styled(Link)(
   ({ theme }) => css`
-    border-bottom: solid ${theme.borderHeight.lg} ${theme.colors.yello};
+    border-bottom: solid ${theme.borderHeight.lg} ${theme.colors.yellow};
     color: ${theme.colors.yellow};
     font-weight: ${theme.fontWeight.md};
     transition: opacity 250ms ease-in-out;

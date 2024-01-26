@@ -47,6 +47,7 @@ export const THEME = {
     pe: '2px', // petite // consumed
     xs: '4px', // extra-small  //consumed
     sm: '8px', // small // consumed
+    cm: '12px', // compact // consumed
     df: '16px', // default
     lg: '32px', // large //consumed
     xl: '48px', // extra-large // consumed
@@ -63,7 +64,7 @@ export const THEME = {
     sm: '14px',
     df: '16px',
     lg: '20px', // consumed
-    xl: '36px',
+    xl: '36px', // consumed
     gh: '56px', // consumed
   },
   iconSize: {

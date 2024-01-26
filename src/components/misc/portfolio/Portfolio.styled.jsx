@@ -61,7 +61,6 @@ export const Image = styled.img`
 
 export const Works = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
 `;
 
 export const Name = styled.h3(

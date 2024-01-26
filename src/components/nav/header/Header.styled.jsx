@@ -4,11 +4,11 @@ import Link from '@/components/core/Link';
 
 // Layout
 export const Container = styled.header(
-  ({ theme }) => css`
+  ({ theme, $secondary }) => css`
     display: flex;
     width: 100%;
     align-items: center;
-    position: absolute;
+    position: ${$secondary ? 'static' : 'absolute'};
     top: 0;
     z-index: 500;
     padding: ${theme.layout.laptop.y} ${theme.layout.laptop.x};

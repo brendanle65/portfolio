@@ -4,8 +4,8 @@ import { SOCIALS } from '@/constants/socials';
 /**
  * The Header component renders the navbar on the top of each page.
  */
-const Header = () => (
-  <Styled.Container>
+const Header = ({ secondary = false }) => (
+  <Styled.Container $secondary={secondary}>
     <Styled.Brand href="/">
       <Styled.Memoji />
       <Styled.Name>
