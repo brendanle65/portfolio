@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { THEME } from '@/constants/theme';
 
 import CursorStateProvider from '@/contexts/CursorContext';
 import Cursor from '@/components/nav/cursor';
+import SplashScreen from '@/components/misc/splash-screen';
 
 import '../styles/reset.css';
 import '../styles/global.css';
@@ -16,6 +18,7 @@ import '../styles/global.css';
  */
 const App = (props) => {
   const { Component, pageProps, router } = props;
+  const [isSplashLoading, setIsSplashLoading] = useState(true);
 
   return (
     <>
@@ -30,13 +33,18 @@ const App = (props) => {
         />
         <title>Brendan Le - Web Developer</title>
       </Head>
+
       <ThemeProvider theme={THEME}>
         <CursorStateProvider>
           <Cursor />
           <AnimatePresence mode="wait">
-            <motion.div key={router.route}>
-              <Component {...pageProps} />
-            </motion.div>
+            {isSplashLoading ? (
+              <SplashScreen setLoadingComplete={() => setIsSplashLoading(false)} />
+            ) : (
+              <motion.div key={router.route}>
+                <Component {...pageProps} />
+              </motion.div>
+            )}
           </AnimatePresence>
         </CursorStateProvider>
       </ThemeProvider>

@@ -66,6 +66,7 @@ export const THEME = {
     lg: '20px', // consumed
     xl: '36px', // consumed
     gh: '56px', // consumed
+    hg: '84px', // gigantic // consumed
   },
   iconSize: {
     df: '18px',
