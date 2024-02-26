@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Link from '@/components/core/Link';
 
 // Layout
-export const Container = styled.header(
+export const Container = styled(motion.header)(
   ({ theme, $secondary }) => css`
     display: flex;
     width: 100%;

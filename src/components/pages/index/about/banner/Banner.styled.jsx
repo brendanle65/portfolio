@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import Arrow from '@/images/arrow-down.svg';
+import { motion } from 'framer-motion';
 
 export const Container = styled.section(
   ({ theme }) =>
@@ -37,11 +38,11 @@ export const LineThree = styled.div`
   position: relative;
 `;
 
-export const Plus = styled.span`
+export const Plus = styled(motion.span)`
   color: ${(props) => props.theme.colors.green};
 `;
 
-export const Underline = styled.span(
+export const Underline = styled(motion.span)(
   ({ theme }) => css`
     &:after {
       display: block;
@@ -51,7 +52,7 @@ export const Underline = styled.span(
   `
 );
 
-export const Cursor = styled.div(
+export const Cursor = styled(motion.div)(
   ({ theme, $hide }) => css`
     width: 16px;
     height: 16px;
@@ -77,7 +78,7 @@ const bob = keyframes`
   }
 `;
 
-export const Scroll = styled.div`
+export const Scroll = styled(motion.div)`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

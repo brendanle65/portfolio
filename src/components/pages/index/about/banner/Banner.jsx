@@ -1,8 +1,8 @@
 import * as Styled from './Banner.styled';
-import { useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import React, { useState, useRef, useEffect } from 'react';
 
-const INITIAL_ANIMATION_DELAY = 500; // delay before the first phrase is typed
+const INITIAL_ANIMATION_DELAY = 4000; // delay before the first phrase is typed
 const TYPING_DELAY = 500; // delay between each phrase being typed
 const CLEAR_DELAY = 500; // delay between each phrase being cleared
 const LETTER_TYPING_DELAY = 40; // delay between each letter being typed
@@ -20,6 +20,18 @@ const PHRASES = [
 
 const TOP_OFFSET = 25; // number of pixels to scroll before fading
 const BOTTOM_OFFSET = 200; // number of pixels above container to finish fading
+
+const variants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 /**
  * The Banner component renders a changing tagline as the opening section for the about section on the home page.
@@ -111,28 +123,43 @@ const Banner = () => {
 
   return (
     <Styled.Container id="intro">
-      <div>
+      <motion.div initial="initial" animate="animate" variants={variants}>
         <Styled.LineOne>
-          <span>I'm just a&nbsp;</span>
-          <Styled.Underline> dreamer </Styled.Underline>
-          <span>&nbsp;who</span>
+          <motion.span variants={variants}>I'm</motion.span>&nbsp;
+          <motion.span variants={variants}>just</motion.span>&nbsp;
+          <motion.span variants={variants}>a</motion.span>&nbsp;
+          <Styled.Underline variants={variants}> dreamer </Styled.Underline>&nbsp;
+          <motion.span variants={variants}>who</motion.span>
         </Styled.LineOne>
         <Styled.LineTwo>
-          <span>believes in the&nbsp;</span>
-          <Styled.Underline>possibility</Styled.Underline>
-          <span>&nbsp;that</span>
+          <motion.span variants={variants}>believes</motion.span>&nbsp;
+          <motion.span variants={variants}>in</motion.span>&nbsp;
+          <motion.span variants={variants}>the</motion.span>&nbsp;
+          <Styled.Underline variants={variants}>possibility</Styled.Underline>&nbsp;
+          <motion.span variants={variants}>that</motion.span>
         </Styled.LineTwo>
         <Styled.LineThree>
-          <span>Web </span>
-          <Styled.Plus>&nbsp;+&nbsp;</Styled.Plus>
-          <span>AI =&nbsp;</span>
+          <motion.span variants={variants}>Web </motion.span>&nbsp;
+          <Styled.Plus variants={variants}>+</Styled.Plus>&nbsp;
+          <motion.span variants={variants}>AI</motion.span>&nbsp;
+          <motion.span variants={variants}>=</motion.span>&nbsp;
           <Styled.DynamicBox>
             <span>{currentText}</span>
-            <Styled.Cursor $hide={hideCursor} />
+            <Styled.Cursor variants={variants} $hide={hideCursor} />
           </Styled.DynamicBox>
         </Styled.LineThree>
-      </div>
-      <Styled.Scroll $opacity={scrollOpacity}>
+      </motion.div>
+      <Styled.Scroll
+        $opacity={scrollOpacity}
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            delay: 5,
+          },
+        }}
+      >
         <span>SCROLL</span>
         <Styled.Icon />
       </Styled.Scroll>

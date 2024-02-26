@@ -1,13 +1,18 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Subtitle = styled.h3(
+export const Wrapper = styled.div`
+  overflow: hidden;
+`;
+
+export const Subtitle = styled(motion.h3)(
   ({ theme }) => css`
     font-size: ${theme.fontSize.lg};
     color: ${theme.colors.gray[500]};
   `
 );
 
-export const Title = styled.h1(
+export const Title = styled(motion.h1)(
   ({ theme }) => css`
     font-size: ${theme.fontSize.xl};
     line-height: ${theme.fontHeight.md};
